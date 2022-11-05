@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}Contact 
+{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0 mb-3">
+    <img src="/static/img/1.jpg" class="d-block w-100 mx-0" alt="...">
+</div>
+<div class="container mb-3 py-4">
+    <h1 class="text-center">Contact Us</h1>
+    <form method="POST" action="/contact">
+    {% csrf_token %}
+    <div class="form-group mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name=
+        "name" placeholder="Enter your name">
+      </div>
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name=
+        "name" placeholder="Name@example.com">
+      </div>
+      <div class="form-group mb-3">
+        <label for="phone" class="form-label">Contact</label>
+        <input type="phone" class="form-control" id="phone" name=
+        "name" placeholder="0123456789">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Tell me about what you want to know...</label>
+        <textarea class="form-control" id="desc" name="desc" placeholder="..." rows="3"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+      <small class="d-block mb-3 text-muted">© 2022–2022</small>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Features</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Chocolate</a></li>
+        <li><a class="link-secondary" href="#">Dry Fruits</a></li>
+        <li><a class="link-secondary" href="#">softy</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>SURPRISE ME</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Party Time</a></li>
+        <li><a class="link-secondary" href="#">Contest</a></li>
+        <li><a class="link-secondary" href="#">We're Close By</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>KNOW US MORE</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">About Archies</a></li>
+        <li><a class="link-secondary" href="#">Awards</a></li>
+        <li><a class="link-secondary" href="#">Privacy Policy</a></li>
+        <li><a class="link-secondary" href="#">FAQ</a></li>
+        <li><a class="link-secondary" href="#">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+{% endblock body %}
